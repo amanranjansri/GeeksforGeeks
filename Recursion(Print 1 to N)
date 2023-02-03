@@ -1,0 +1,13 @@
+ void printNos(int N)
+    {
+        //base condition
+        if(N==0)
+        {
+            return;
+        }                          //03-feb-2023
+        //recursive call
+        printNos(N-1);
+        
+        cout<<N<<" ";
+        
+    }
