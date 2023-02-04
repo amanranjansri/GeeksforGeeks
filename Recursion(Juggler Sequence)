@@ -1,0 +1,23 @@
+vector<int> ans;
+    
+    vector<int> jugglerSequence(int N){
+        
+        ans.push_back(N);
+        
+        //base condition
+        if(N==1)
+        {
+            return ans;  //04-feb-2023
+        }
+        
+        //recursive relation
+        if(N%2==0)
+        {
+            jugglerSequence(pow(N,0.5));
+        }
+        else
+        {
+            jugglerSequence(pow(N,1.5));
+        }
+        return ans;
+    }
