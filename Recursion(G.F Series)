@@ -1,0 +1,25 @@
+long long int gf(int n)
+    {
+        //base condition
+        if(n==1)
+        {
+            return 0;
+        }
+        if(n==2)
+        {
+            return 1;                     //04-feb-2023
+        }
+        
+        //recursive relation
+        return pow(gf(n-2),2) - gf(n-1);
+    }
+    
+    void gfSeries(int N)
+    {
+        // Write Your Code here
+        for(int i = 1; i <= N; i++)
+        {
+            cout<<gf(i)<<" ";
+        }
+            cout<<endl;
+    }
