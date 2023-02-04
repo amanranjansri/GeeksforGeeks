@@ -1,0 +1,26 @@
+long long power(int N,int R)
+    {
+       long long M = 1000000007;
+       // base condition
+       if(R==0)
+       {
+           return 1;
+       }
+       if(R==1)                 //04-feb-2023
+       {
+           return (N%M);
+       }
+       
+       //recursive call
+      long long  ans = power(N,R/2);
+      ans = (ans*ans)%M;
+       
+       if(R%2==0)
+       {
+           return ans%M;
+       }
+        else
+        {
+            return (N*ans)%M;
+        }
+    }
