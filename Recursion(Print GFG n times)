@@ -1,0 +1,14 @@
+void printGfg(int N) {
+        
+        //base condition
+        if(N==0)
+        {
+            return;
+        }                   //05-feb-2023
+        
+        //recursive relation
+        
+        cout<<"GFG"<<" ";
+        
+        printGfg(N-1);
+    }
