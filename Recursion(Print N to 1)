@@ -1,0 +1,13 @@
+void printNos(int N) {
+        
+        //base condition
+        if(N==0)
+        {
+            return;
+        }   
+                                //05-feb-2023
+        cout<<N<<" ";
+        
+        //recursive relation
+         printNos(N-1);
+    }
