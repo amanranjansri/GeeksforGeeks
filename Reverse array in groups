@@ -1,0 +1,15 @@
+void reverseInGroups(vector<long long>& arr, int n, int k){
+        // code here
+        for(int i = 0; i < n; i = i + k)
+        {
+            int s = i;
+            int e = min(i+k-1, n-1);
+            
+            while(s <= e)
+            {
+                swap(arr[s], arr[e]);
+                s++;
+                e--;
+            }
+        }
+    } //08-feb-2023
