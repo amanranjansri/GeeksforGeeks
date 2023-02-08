@@ -1,0 +1,14 @@
+int firstElementKTime(int a[], int n, int k)
+    {
+        unordered_map<int,int> uno;
+        
+        for(int i =0; i<n; i++)
+        {
+            uno[a[i]]++;
+            
+            if(uno[a[i]]==k)
+            
+            return a[i];
+        }
+        return -1;
+    } //08-feb-2023
