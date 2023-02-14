@@ -1,0 +1,13 @@
+int minCost(vector<vector<int>> &colors, int N) {
+        // Write your code here.
+        int a=0,b=0,c=0;
+        for(int i=N-1;i>=0;i--){
+            int x=a,y=b,z=c;
+            a=colors[i][0]+min(y,z);
+            b=colors[i][1]+min(x,z);
+            c=colors[i][2]+min(x,y);
+        }
+        return min(a,min(b,c));
+    }
+};  // 14-feb-2023
+// but not understand what the hell is going on
