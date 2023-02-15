@@ -1,0 +1,13 @@
+  int getCount(struct Node* head){
+    
+        //Code here
+        Node* temp = head;
+        int cnt = 0;
+        
+        while(temp != NULL)
+        {
+            temp = temp->next;
+            cnt++;
+        }
+        return cnt;
+    } //15-feb-2023
