@@ -1,0 +1,13 @@
+bool check (string s)
+        {
+        	//code here.
+        	int i;
+        	
+        	for(i = 1; i <s.length(); i++)
+        	{
+        	    if(s[0] != s[i])
+        	    {
+        	        return false;
+        	    }
+        	}return true;
+        } //15-feb-2023
