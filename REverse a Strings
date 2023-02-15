@@ -1,0 +1,23 @@
+void reverse(string &s, int i, int j)
+  {
+      //base case
+      if(i>j)
+      {
+          return;
+      }
+      
+      //recursive call
+      swap(s[i],s[j]);
+      i++;
+      j--;
+      
+      return reverse(s,i,j);
+      
+  }
+    string revStr(string S) {
+        // code here
+        int j = S.length()-1;
+        int i =0;
+       reverse(S,i,j);
+       cout<<S;
+    }//15-feb-2023
