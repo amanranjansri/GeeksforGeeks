@@ -1,0 +1,41 @@
+
+// void reverse(queue<int>& q)
+// {
+//     //base case
+//     if(q.empty())
+//     {
+//         return;
+//     }
+    
+//     //recursive call
+//     int x = q.front();
+//     q.pop();
+//     reverse(q);
+//     q.push(x);
+     
+// }
+
+//Function to reverse the queue.
+queue<int> rev(queue<int> q)
+{
+    // add code here.
+    //  reverse(q);
+    //  return q;
+    
+    stack<int> s;
+    
+    while(!q.empty())
+    {
+        s.push(q.front());
+        q.pop();
+    }
+    
+    while(!s.empty())
+    {
+        q.push(s.top());
+        s.pop();
+    }
+    
+    return q;
+    
+}//28-feb-2023
