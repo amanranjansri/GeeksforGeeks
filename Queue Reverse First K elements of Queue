@@ -1,0 +1,30 @@
+queue<int> modifyQueue(queue<int> q, int k) {
+    
+    //step -1 pop first k from Queue and put in stack
+    
+    stack<int> s;
+    
+    for(int i =0; i<k; i++)
+    {
+        s.push(q.front());
+        q.pop();
+    }
+       
+    //step -2 fetch from stack asd push into queue
+    while(!s.empty())
+    {
+        q.push(s.top());
+        s.pop();
+    }
+    
+    //step -3 fetch first (n-k) element from Queue and push back
+    
+    int t = q.size()-k;
+    
+    while(t--)
+    {
+        q.push(q.front());
+        q.pop();
+    }
+    return q;
+}//06-march-2023
